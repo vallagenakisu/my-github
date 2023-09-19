@@ -1,0 +1,1 @@
+{"name":"Local: is it a cat","url":"c:\\Users\\tanzi\\OneDrive\\Desktop\\my github\\cph\\is it a cat.cpp","tests":[{"id":1677768756086,"input":"1\n2\nmeowoww","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\tanzi\\OneDrive\\Desktop\\my github\\cph\\is it a cat.cpp","group":"local","local":true}

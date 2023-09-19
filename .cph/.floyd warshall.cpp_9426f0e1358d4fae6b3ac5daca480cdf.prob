@@ -1,0 +1,1 @@
+{"name":"Local: floyd warshall","url":"c:\\Users\\tanzi\\OneDrive\\Desktop\\my github\\floyd warshall.cpp","tests":[{"id":1692776675602,"input":"5 5 \n1 2 -1 \n2 3 4\n3 5 -6\n5 2 -5\n4 3 2\n2 2 ","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\tanzi\\OneDrive\\Desktop\\my github\\floyd warshall.cpp","group":"local","local":true}

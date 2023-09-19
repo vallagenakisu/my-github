@@ -2,99 +2,52 @@
 using namespace std;
 int main()
 {
-    int n,c=0,a=1;
+    int n;
     cin>>n;
-    int ar[n];
+    int a[n];
+    for(int i=0;i<n;i++) cin>>a[i];
+    int c1,c2,c3,c4;
+    c1=c2=c3=c4=0;
     for(int i=0;i<n;i++)
     {
-        cin>>ar[i];
+        if(a[i]==1)
+        c1++;
+        if(a[i]==2)
+        c2++;
+        if(a[i]==3)
+        c3++;
+        if(a[i]==4)
+        c4++;
     }
-    int a1=0,a2=0,a3=0,a4=0;
-    for(int i=0;i<n;i++)
+    int c=0;
+    c=c+c4;
+    c4=0;
+    if(c1==c3)
+    {c=c+c1;c1=c3=0;}
+    else if(c1>c3)
+    {c=c+c3;c1=c1-c3;c3=0;}
+    else if(c3>c1)
+    {c=c+c1+(c3-c1);c3=c1=0;}
+    if(c2%2==0 && c2!=0)
+    {c=c+c2/2;c2=0;}
+    else if(c2%2!=0 && c2!=1 && c2!=0)
+    {c=c+c2/2;c2=1;}
+    if(c2!=0)
     {
-        if(ar[i]==1)
-        a1++;
-        else if(ar[i]==2)
-        a2++;
-        else  if(ar[i]==3)
-        a3++;
-        else if(ar[i]==4)
-        a4++;
+        if(c1>c2)
+        {c=c+1;c2=0;c1=c1-2;}
+        else if(c1=c2)
+        {c=c+1;c1=c2=0;}
     }
-    c=c+a4;
-    if(a3<a1 && a3!=0)
+    if(c1>4)
     {
-        c=c+a3;
-        a1=a1-a3;
-        a3=0;
-    }
-    else if(a3>a1 && a1!=0)
-    {
-        c=c+(a3-a1);
-        a3=a3-a1;
-        c=c+a3;
-        a1=0;
-        a3=0;
-    }
-    else if(a1==a3)
-    {
-        c=c+a3;
-        a3=0;
-        a1=0;
-    }
-    if(a2%2==0)
-    {
-        c=c+a2/2;
-        a2=0;
-    }
-    else if(a2%2!=0 && a2>1)
-    {
-        c=c+a2-1/2;
-        a2=1;
-    }
-    if(a2!=0 && a1==0)
-    {
-        c=c+a2;
-        a2=0;
-    }
-    if(a1>2*a2 && a2!=0)
-    {
-        c=c+(a1-2*a2);
-        a2=0;
-        a1=a1-2*a2;
-        c=c+a1;
-        a1=0;
-    }
-    else if(a1==2*a2 && a1!=0 && a2!=0)
-    {
-        c=c+1;
-        a1=0;
-        a2=0;
-    }
-    if(a1!=0)
-    {
-        if(a1%4==0)
+        while(c1>4)
         {
-            c=c+a1/4;
-            a1=0;
-        }
-        else 
-        {
-            c=c+(a1/4)+1;
-            a1=0;
+            c=c+1;
+            c1=c1-4;
         }
     }
-    if(a3!=0)
-    {
-        if(a3%4==0)
-        {
-            c=c+a3-a3/4;
-            a3=0;
-        }
-        else{
-        c=c+a3;
-        a3=0;
-        }
-    }
+    if(c1<=4 && c1!=0)
+    {c=c+1;;c1=0;}
     cout<<c;
 }

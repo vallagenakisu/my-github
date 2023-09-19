@@ -1,0 +1,1 @@
+{"name":"Local: next permutations","url":"c:\\Users\\tanzi\\OneDrive\\Desktop\\my github\\next permutations.cpp","tests":[{"id":1692642569424,"input":"4\n1 1337\n13 69\n2 4\n88 89","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\tanzi\\OneDrive\\Desktop\\my github\\next permutations.cpp","group":"local","local":true}

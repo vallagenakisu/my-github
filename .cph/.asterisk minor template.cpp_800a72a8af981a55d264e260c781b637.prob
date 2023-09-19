@@ -1,0 +1,1 @@
+{"name":"Local: asterisk minor template","url":"c:\\Users\\tanzi\\OneDrive\\Desktop\\my github\\asterisk minor template.cpp","tests":[{"id":1678210665161,"input":"1\nabcd\nabcd","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\tanzi\\OneDrive\\Desktop\\my github\\asterisk minor template.cpp","group":"local","local":true}
