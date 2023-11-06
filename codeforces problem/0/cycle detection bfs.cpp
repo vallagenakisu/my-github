@@ -32,6 +32,7 @@ void bfs(int s)
             }
         }
     }
+    cout << "Cycle Does Not Exists"<<endl;
 }
 
 void sol()
