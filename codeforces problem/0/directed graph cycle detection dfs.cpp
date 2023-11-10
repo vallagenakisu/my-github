@@ -41,6 +41,7 @@ void cycle()
     for(int i = cycle_end;i!=cycle_start;i = parent[i])
     cout << i << " ";
     cout << cycle_start;
+    cout << endl;
 }
 void sol()
 {
@@ -51,6 +52,7 @@ void sol()
         cin >> a >> b;
         adj[a].push_back(b);
     }
+    int count=0;
     for(int i = 1; i<= v ; i ++ )
     {
         if (!vis[i])
@@ -59,11 +61,12 @@ void sol()
             {
                 cout << "Cycle Exists" << endl;
                 cycle();
-                return;
+                count++;
             }
         }
     }
-    cout <<"Cycle Does Not Exists"<<endl;
+    cout<< "The number of Cycle is "  << count << endl;
+    //cout <<"Cycle Does Not Exists"<<endl;
 }
 int main()
 {

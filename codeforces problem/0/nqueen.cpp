@@ -1,78 +1,54 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 const int N = 10;
 int n;
 bool a[N][N];
-
-bool isSafe(int x , int y)
+int count1;
+bool isSafe(int row, int col)
 {
-    for(int row = 0 ; row<x ; row++)
-    {
-        if(a[x][row] == 1)
-        return false;
-    }
-    int row = x ;
-    int col = y ;
-    while( row >=0 && col >=0)
-    {
-        if(a[row][col]==1)
-        return false;
-        row--;
-        col--;
-    }
-    while( row <n && col >=0)
-    {
-        if(a[row][col]==1)
-        return false;
-        row++;
-        col--;
-    }
-    while( row >=0 && col < n)
-    {
-        if(a[row][col]==1)
-        return false;
-        row--;
-        col++;
-    }
-    while( row <n && col < n)
-    {
-        if(a[row][col]==1)
-        return false;
-        row++;
-        col++;
-    }
+    int i, j;
+ 
+    for (i = 0; i < col; i++)
+        if (a[row][i])
+            return false;
+ 
+    for (i = row, j = col; i >= 0 && j >= 0; i--, j--)
+        if (a[i][j])
+            return false;
+ 
+    for (i = row, j = col; j >= 0 && i < N; i++, j--)
+        if (a[i][j])
+            return false;
+ 
     return true;
-
 }
-bool nQueen(int x)
+void nQueen(int col)
 {
-    if(x>=n)
-    return true;
-
-    for(int row = 0 ; row<n ; row++)
+    if (col == n)
     {
-        if(isSafe(row,x))
+        count1++;
+        return ;
+    }
+    for (int row = 0; row < n; row++)
+    {
+        if (isSafe(row, col))
         {
-            a[row][x] = 1;
-
-            if(nQueen(x+1))
-            return true;
-
-
-            a[row][x] = 0;
+            a[row][col] = 1;
+            nQueen(col + 1);
+            a[row][col] = 0;
         }
     }
-    return false;
 }
 
 int main()
 {
     cin >> n;
     nQueen(0);
-    for(int i =0 ; i <n;i++)
-    {
-        for(int j =0 ; j < n ; j++)
-        cout << a[i][j] << " ";
-        cout << endl;
-    }
+    // for (int i = 0; i < n; i++)
+    // {
+    //     for (int j = 0; j < n; j++)
+    //         cout << a[i][j] << " ";
+    //     cout << endl;
+    // }
+    cout<< count1 <<" ";
 }
