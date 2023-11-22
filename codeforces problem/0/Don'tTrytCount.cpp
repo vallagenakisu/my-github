@@ -3,31 +3,8 @@
 using namespace std;
 bool compare(string a, string b)
 {
-    if(a==b) return true;
-    int l = a.size();
-    int j = b.size();
-    int k = 0, c = 0;
-    if (l > j)
-    {
-        for (int i = 0; i < l; i++)
-        {
-            while (a[i] == b[k])
-            {
-                i++;
-                k++;
-                if (k == j)
-                    return true;
-                if (a[i] != b[k])
-                {
-                    k = 0;
-                    i--;
-                    break;
-                }
-            }
-        }
-    }
-    else
-        return false;
+    if(a.find(b)!= string::npos)
+    return true;
     return false;
 }
 void sol()
