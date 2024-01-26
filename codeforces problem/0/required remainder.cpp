@@ -3,13 +3,11 @@
 using namespace std;
 void sol()
 {
-    // int x, y, n;
-    // cin >> x >> y >> n;
-    
-    // int f = (n - y) / x;
-    // int res = f * x + y;
-    // cout << res << endl;
-    cout << __gcd(1,10);
+    int x, y, n;
+    cin >> x >> y >> n;
+    int f = (n - y) / x;
+    int res = f * x + y;
+    cout << res << endl;
 }
 int main()
 {

@@ -24,7 +24,6 @@ void sol()
     cout << x << " ";
     cout << endl;
 
-
 }
 int main()
 {
