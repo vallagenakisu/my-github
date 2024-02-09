@@ -1,20 +1,36 @@
 #include<bits/stdc++.h>
+#define f(i,n) for(int i=0;i<n;i++)
 using namespace std;
-int main()
+void sol()
 {
     string a;
-    cin>>a;
-    string b;
-    int c=0;
-   for(int i=0;i<a.size();)
-   {
-    if(a[i]=='W' && a[i+1]=='U' && a[i+2]=='B')
-    i=i+3;
-    else 
+    cin >> a;
+    f(i,a.size())
     {
-        b.push_back(a[i]);
-        i++;
+        if(a[i]=='W' and a[i+1]=='U' and a[i+2]=='B')
+        {
+            i = i+2;
+        }
+        else 
+        {
+            while(!(a[i]=='W' and a[i+1]=='U' and a[i+2]=='B'))
+            {
+                cout << a[i];
+                i++;
+                if(i>=a.size())
+                return;
+
+            }
+            cout <<" ";
+            i--;
+        }
     }
-   }
-   cout<<b;
+}
+int main()
+{
+  int t;
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);
+  sol();
+
 }
