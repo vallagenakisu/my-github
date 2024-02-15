@@ -25,11 +25,6 @@ void pyramid(int n, int x)
     printStar(2*n-1);
    
     cout << endl;
-    // for (int i = 0; i < x - n; i++)
-    //     cout << " ";
-    // for (int i = 0; i < (2 * n - 1); i++)
-    //     cout << "*";
-    //cout << endl;
 }
 
 void sol()
