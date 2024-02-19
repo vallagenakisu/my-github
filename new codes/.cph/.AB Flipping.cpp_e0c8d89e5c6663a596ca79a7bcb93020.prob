@@ -1,0 +1,1 @@
+{"name":"Local: AB Flipping","url":"c:\\Users\\tanzi\\OneDrive\\Desktop\\my github\\new codes\\AB Flipping.cpp","tests":[{"id":1708085447488,"input":"3\n2\nAB\n4\nBBBA\n4\nAABB\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\tanzi\\OneDrive\\Desktop\\my github\\new codes\\AB Flipping.cpp","group":"local","local":true}
